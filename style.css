@@ -44,80 +44,6 @@ h4 {
   font-size: 20px;
 }
 
-.blue {
-  color: var(--blue);
-}
-
-.white {
-  color: var(--white);
-}
-
-.centered {
-  text-align: center;
-}
-
-.margin-no {
-  margin: 0;
-}
-
-.padding-no {
-  padding: 0;
-}
-
-.padding-80 {
-  padding: 80px 0 80px 0px;
-}
-
-.padding-70 {
-  padding: 70px 0 70px 0px;
-}
-
-.padding-50 {
-  padding: 50px 0 50px 0px;
-}
-
-.no-top {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.no-bottom {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.no-lh {
-  line-height: 0;
-}
-
-.no-ls {
-  letter-spacing: 0;
-}
-
-.light {
-  font-weight: 300;
-}
-
-.bold {
-  font-weight: 900;
-}
-
-.size-100 {
-  font-size: 100px;
-}
-
-.size-80 {
-  font-size: 80px;
-}
-
-.size-50 {
-  font-size: 50px;
-}
-
-.size-25 {
-  font-size: 25px;
-}
-
 h2.title-form {
   padding-bottom: 50px;
   letter-spacing: 0;
@@ -176,23 +102,22 @@ nav li a {
   padding: 5px 15px;
 }
 
-header .quote-button {
-  float: right;
+.btn {
   font-size: 16px;
   font-weight: 900;
-  background: var(--white);
-  border-radius: 10px;
+  border-radius: 100px;
   margin-top: 15px;
   margin-right: 30px;
   border: 1px solid transparent;
+  width: 180px;
+  height: 40px;
 }
 
-header .quote-button a {
+.btn a {
   display: table-cell;
   vertical-align: middle;
   width: 180px;
   height: 40px;
-  color: var(--blue);
   text-decoration: none;
 }
 
@@ -581,7 +506,6 @@ article .grid-container .grids li:nth-child(4) {
   border: 10px solid #1338bd;
   border-radius: 70%;
   overflow: hidden;
-  margin: 0 auto;
   margin-bottom: 60px;
   box-shadow: 0px 12px 18px -6px rgb(0 0 0 / 30%);
 }
@@ -598,4 +522,98 @@ iframe {
 lottie-player {
   margin: 0 auto;
   margin-top: 50px;
+}
+
+/* ! GLOBAL CLASSES */
+
+.blue {
+  color: var(--blue);
+}
+
+.blue-bg {
+  background: var(--blue);
+}
+
+.white-bg {
+  background: var(--white);
+}
+
+.white {
+  color: var(--white);
+}
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.float-r {
+  float: right;
+}
+
+.margin-no {
+  margin: 0;
+}
+
+.padding-no {
+  padding: 0;
+}
+
+.padding-80 {
+  padding: 80px 0 80px 0px;
+}
+
+.padding-70 {
+  padding: 70px 0 70px 0px;
+}
+
+.padding-50 {
+  padding: 50px 0 50px 0px;
+}
+
+.margin-50 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.no-top {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.no-bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.no-lh {
+  line-height: 0;
+}
+
+.no-ls {
+  letter-spacing: 0;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.size-100 {
+  font-size: 100px;
+}
+
+.size-80 {
+  font-size: 80px;
+}
+
+.size-50 {
+  font-size: 50px;
+}
+
+.size-25 {
+  font-size: 25px;
 }
