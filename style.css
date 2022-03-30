@@ -1,9 +1,7 @@
-/* ! Alejandro Marrero */
-
 :root {
   --black: #000000;
   --white: #ffffff;
-  --blue: #1338bd;
+  --blue: #2d13bd;
   --text: #86888f;
   --article-text: #848484;
 }
@@ -113,6 +111,12 @@ nav li a {
   height: 40px;
 }
 
+.btn:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
 .btn a {
   display: table-cell;
   vertical-align: middle;
@@ -169,7 +173,7 @@ section .contact-button {
   font-size: 16px;
   font-weight: 300;
   background: var(--blue);
-  border-radius: 10px;
+  border-radius: 100px;
   border: 1px solid transparent;
   margin: 0 auto;
   margin-top: 60px;
@@ -183,6 +187,12 @@ section .contact-button a {
   color: var(--white);
   text-decoration: none;
   text-align: center;
+}
+
+section .contact-button a:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
 }
 
 article {
@@ -296,7 +306,7 @@ footer section.bottom-icons p.icons {
   margin: 20px 0 20px 0;
 }
 
-footer section.bottom-bar {
+footer .bottom-bar {
   height: 80px;
   background: var(--blue);
   display: flex;
@@ -305,14 +315,14 @@ footer section.bottom-bar {
   align-items: center;
 }
 
-footer section.bottom-bar p {
+footer .bottom-bar p {
   font-size: 20px;
   padding: 0;
   margin: 0;
   color: var(--white);
 }
 
-footer section.bottom-bar p a {
+footer .bottom-bar p a {
   color: var(--white);
   text-decoration: none;
 }
@@ -390,23 +400,27 @@ select {
 }
 
 input[type="submit"] {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  display: block;
   height: 38px;
   width: 120px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 17px;
   font-weight: 900;
+  text-align: center;
   color: #1338bd;
-  border-radius: 100px;
   border: 1px solid white;
+  border-radius: 100px;
   cursor: pointer;
   margin: 0 auto;
-  text-align: center;
-  display: block;
+  box-shadow: 0px 12px 18px -6px rgb(0 0 0 / 30%);
 }
 
 input[type="submit"]:hover {
   color: var(--white);
   background: var(--blue);
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
 }
 
 input#consent {
@@ -444,7 +458,7 @@ article .table-container .CABTable th {
   border-color: #e1e1e1;
   border-style: solid;
   padding: 3px;
-  color: #1338bd;
+  color: var(--blue);
 }
 
 article .table-container .CABTable thead {
@@ -499,11 +513,70 @@ article .grid-container .grids li:nth-child(4) {
 
 /* ! CONTACT PAGE */
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 500px;
+
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup a {
+  text-decoration: none;
+}
+
+.popup a:hover {
+  text-decoration: dotted;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: var(--blue);
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
 .map {
   width: 600px;
   height: 600px;
-  background-color: #1338bd;
-  border: 10px solid #1338bd;
+  background-color: var(--blue);
+  border: 10px solid var(--blue);
   border-radius: 70%;
   overflow: hidden;
   margin-bottom: 60px;
@@ -571,6 +644,10 @@ lottie-player {
   padding: 50px 0 50px 0px;
 }
 
+.padding-25 {
+  padding: 25px 0 25px 0px;
+}
+
 .margin-50 {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -616,4 +693,83 @@ lottie-player {
 
 .size-25 {
   font-size: 25px;
+}
+
+/* ! ANIMATIONS */
+
+.rotate {
+  cursor: pointer;
+}
+
+.rotate:hover {
+  color: #afafaf;
+  -moz-animation: spin 0.4s 1 linear;
+  -o-animation: spin 0.4s 1 linear;
+  -webkit-animation: spin 0.4s 1 linear;
+  animation: spin 0.4s 1 linear;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

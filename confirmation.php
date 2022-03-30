@@ -38,7 +38,15 @@
             </div>
             <div class="main-text">
                 <p>Your message has been sent successfully, we will contact you soon.</p>
-                <h4>Your message details</h4>   
+                <p class="centered bold blue size-50 padding-25 no-top">Your message details:</p>
+                <p class="centered">
+                    <span class="bold size-25">Name:</span> <?php echo $_GET["name"]; ?><br />
+                    <span class="bold size-25">Surname:</span> <?php echo $_GET["surname"]; ?><br /> 
+                    <span class="bold size-25">Address:</span> <?php echo $_GET["address"]; ?><br />  
+                    <span class="bold size-25">Gender:</span> <?php echo $_GET["gender"]; ?><br />  
+                    <span class="bold size-25">Animal:</span> <?php echo $_GET["animal"]; ?><br />  
+                    <span class="bold size-25">Country:</span> <?php echo $_GET["country"]; ?>  
+                </p> 
             </div>
             <div class="btn centered blue-bg margin-50"><a class="white margin-50" href="./register.html">GO BACK</a></div>
         </article>

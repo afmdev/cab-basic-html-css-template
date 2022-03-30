@@ -37,58 +37,59 @@
             </div>
             <div class="form-container">
                 <h2 class="title-form padding-50 no-top">FILL THE FORM</h2>
-                <form action="./confirmation.html" method="get">
+                <form action="./confirmation.php" method="get">
                 <div class="grid">
                     <div class="grid-item">
-                        <input type="text" placeholder="✔️ Name">
+                        <input type="text" placeholder="✔️ Name *" name="name" id="name" required>
                     </div>
 
                     <div class="grid-item">
-                        <input type="text" placeholder="✔️ Surname">
+                        <input type="text" placeholder="✔️ Surname *" name="surname" id="surname" required>
                     </div>
 
                     <div class="grid-item">
-                        <input type="text" placeholder="✔️ Address">
+                        <input type="text" placeholder="✔️ Address *" name="address" id="address" required>
                     </div>
 
                     <div class="grid-item">
                         <h3 class="title-form no-ls">Gender</h3>
-                        <input type="radio" id="gender1" name="gender1" value="Male">
-                        <label>Male</label><br>
-                        <input type="radio" id="gender2" name="gender1" value="Female">
-                        <label>Female</label><br>
-                        <input type="radio" id="gender3" name="gender1" value="Non-Binary">
-                        <label>Non Binary</label>
+                        <input type="radio" id="gender1" name="gender" value="Male">
+                        <label for="gender1">Male</label><br>
+                        <input type="radio" id="gender2" name="gender" value="Female">
+                        <label for="gender2">Female</label><br>
+                        <input type="radio" id="gender3" name="gender" value="Non-Binary">
+                        <label for="gender3">Non Binary</label>
                     </div>
                         
                     <div class="grid-item">
                         <h3 class="title-form no-ls">Animal</h3>
-                        <input type="checkbox" id="animal1" name="animal1" value="Dog">
+                        <input type="checkbox" id="animal1" name="animal" value="Dog">
                         <label for="animal1">Dog</label><br>
-                        <input type="checkbox" id="animal2" name="animal2" value="Cat">
+                        <input type="checkbox" id="animal2" name="animal" value="Cat">
                         <label for="animal2">Cat</label><br>
-                        <input type="checkbox" id="animal3" name="animal3" value="Parrot">
+                        <input type="checkbox" id="animal3" name="animal" value="Parrot">
                         <label for="animal3">Parrot</label>
                     </div>
                     <div class="grid-item">
                         <h3 class="title-form no-ls">Country</h3>
                         <select name="country">
-                            <option value="es">🇪🇸 Spanish</option>
-                            <option value="en">🇬🇧 English</option>
-                            <option value="it">🇮🇹 Italian</option>
-                            <option value="de">🇩🇪 Deutsch</option>
-                            <option value="fr">🇫🇷 French</option>
-                            <option value="pt">🇵🇹 Portuguese</option>
+                            <option value="Spain">🇪🇸 Spanish</option>
+                            <option value="England">🇬🇧 English</option>
+                            <option value="Italy">🇮🇹 Italian</option>
+                            <option value="Deutschland">🇩🇪 Deutsch</option>
+                            <option value="France">🇫🇷 French</option>
+                            <option value="Portugal">🇵🇹 Portuguese</option>
                         </select>
                     </div>
                 </div>
                 <h4 class="title-form no-ls">Consent Terms and Conditions</h4>
                 <div class="grid-item">
                     
-                    <input type="checkbox" id="consent" name="consent" value="consent"><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <a href="#">sed diam voluptua</a>.</p>
+                    <input type="checkbox" id="consent" name="yes" value="yes" required><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <a href="#">sed diam voluptua</a>.</p>
                 </div>
                 <div class="grid-item"><input type="submit" value="Submit"></div>
                 </form>
+                
             </div>
             <div class="other-text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -108,16 +109,16 @@
         <section class="bottom-icons">
             <p class="blue bold centered size-50">BLUESKY</p>
             <p class="icons">
-                <img src="./img/fb.png" alt="">
-                <img src="./img/tw.png" alt="">
-                <img src="./img/ig.png" alt="">
+                <img class="rotate" src="./img/fb.png" alt="Facebook">
+                <img class="rotate" src="./img/tw.png" alt="Twitter">
+                <img class="rotate" src="./img/ig.png" alt="Instagram">
             </p>
 
         </section>
-        <section class="bottom-bar">
+        <div class="bottom-bar">
             <p>Copyright © 2022</p>
             <p><a href="#">Legal</a> - <a href="#">Terms</a> - <a href="#">Contact</a></p>
-        </section>
+        </div>
     </footer>
 
 </body>
