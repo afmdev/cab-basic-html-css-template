@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="icon" href="./img/favicon.ico" />
+<meta name="author" content="Alejandro F. Marrero">
+<meta name="keywords" content="HTML, CSS, JavaScript, Rest API">
+<meta name="description"
+	content="Full-Stack Development Course :: Code Academy Berlin 2022 :: Template made with HTML/CSS">
     <title>CONTACT : JUST A BLUE SKY</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,9 +68,11 @@
 
         </section>
         <div class="bottom-bar">
-            <p>Copyright © 2022</p>
-            <p><a href="#">Legal</a> - <a href="#">Terms</a> - <a href="#">Contact</a></p>
-        </div>
+		<p><a href="https://www.alejandrofm.com" rel="noopener" title="Webdesign Berlin"><img
+					src="https://www.alejandrofm.com/wp-content/uploads/2021/11/alejandro-fm-diseno-web-berlin-wordpress-front-end-logo-white.svg"
+					width="42" height="19" alt="Webdesign Berlin" /></a></p>
+		<p><a href="#">Legal</a> - <a href="#">Terms</a> - <a href="#">Contact</a></p>
+	</div>
     </footer>
 
 </body>
