@@ -325,6 +325,7 @@ footer .bottom-bar p {
 footer .bottom-bar p a {
   color: var(--white);
   text-decoration: none;
+  font-size: 15px;
 }
 
 /* ! REGISTER PAGE */
